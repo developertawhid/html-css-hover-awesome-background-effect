@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.container {
+    width: 120%;
+    height: 100%;
+}
+
+
+.contant-ariya{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #000;
+}
+.content {
+    width: 120%;
+    left: -50px;
+    top: -50px;
+    position: absolute;
+}
+.box-ariya {
+    width: 100%;
+    height: 74px;
+    position: relative;
+ }
+ .box-ariya:nth-child(even){
+     margin-left: 45px;
+ }
+.box {
+    clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
+    background:#F1F1F1;
+    width: 90px;
+    height: 100px;
+    position: static;
+    display: inline-table;
+    transition: 4s;
+    position: relative;
+    overflow: hidden;
+}
+.box::before {
+    content: "";
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    width: 90px;
+    height: 50px;
+    background: #FEFEFE;
+    display: block;
+    transition: 4s;
+}
+.box::after {
+    content: "";
+    clip-path: polygon(0 25%, 50% 50%, 50% 100%, 0 75%);
+    width: 90px;
+    height: 100px;
+    background: #E4E4E4;
+    display: block;
+    transition: 4s;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+@keyframes changeColor {
+
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+
+
+.box:hover {
+    transition: 0s;
+    background:#FF50C6;
+}
+.box:hover::before {
+    transition: 0s;
+    background: #FD54D6;
+}
+.box:hover::after {
+    transition: 0s;
+    background: #FE4CBD;
+}
+
+
+
+
+
+
+
+
